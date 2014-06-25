@@ -1,0 +1,22 @@
+{% extends "layout.html" %}
+
+{% block content%}
+  <h1>{{page.title}}</h1>
+    <br><br>
+  <p>{{page.body|marked}}<p>
+    <br><br>
+  <div>
+    <form action='/wiki/{{page.url_name}}/edit' method='post' id='edit_button'>
+      <input type="submit" class="btn btn-default" value='Edit'></input>
+    </form>
+    <form action='/wiki/{{page.url_name}}/delete' method='post' id='delete_button'>
+      <input type="submit" class="btn btn-primary" value='Delete'></input>
+      <script>
+        document.getElementById('delete_button').onclick = function() {
+          var clicked = true;
+          alert("Are you sure you want to delete this page?");
+        }
+      </script>
+    </form>
+  </div>
+{% endblock %}
