@@ -1,0 +1,14 @@
+{% extends "layout.html" %}
+
+{% block content %}
+  <h1>Edit Page</h1>
+    <form action='/wiki/{{page.url_name}}/edit/submit' method='post'>
+      <h2>{{page.title}}</h2>
+      <br>
+    <div class="form-group">
+      <label for="exampleInputText2">Page Content</label>
+      <textarea type="textarea" name='body' rows='20' class="form-control">{{page.body}}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Edit Done</button>
+  </form>
+{% endblock %}

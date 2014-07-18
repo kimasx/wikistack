@@ -6,9 +6,9 @@
   <p>{{page.body|marked}}<p>
     <br><br>
   <div>
-    <form action='/wiki/{{page.url_name}}/edit' method='post' id='edit_button'>
-      <input type="submit" class="btn btn-default" value='Edit'></input>
-    </form>
+
+    <a href="/wiki/{{page.url_name}}/edit" class="btn btn-default">Edit</a>
+
     <form action='/wiki/{{page.url_name}}/delete' method='post' id='delete_button'>
       <input type="submit" class="btn btn-primary" value='Delete'></input>
       <script>
