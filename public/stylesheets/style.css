@@ -6,3 +6,13 @@ body {
 a {
   color: #00B7FF;
 }
+
+.delete_btn {
+  display: inline-block;
+}
+
+.jumbotron {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-right: 20px;
+}

@@ -9,4 +9,10 @@ router.get('/', function(req, res) {
   });
 });
 
+//route for logging out
+router.get('/logout', function(req, res){
+  req.logout(); //this logout function is provided by passport
+  res.redirect('/');
+})
+
 module.exports = router;

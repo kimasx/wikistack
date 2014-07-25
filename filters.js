@@ -9,7 +9,7 @@ module.exports = function(swig) {
     } else {
       link_name = "Page "+doc.url_name;
     }
-    return "<a href='/wiki/"+doc.url_name+"'>"+link_name+"</a>";
+    return "<a href='/wiki/"+doc.url_name+"/"+ doc._id.toString()+"'>"+link_name+"</a>";
   };
   page_link.safe = true;
   swig.setFilter('page_link', page_link);
@@ -23,4 +23,9 @@ module.exports = function(swig) {
   marked.safe = true;
   swig.setFilter('marked', marked);
 
+  var excerpt = function(page) {
+    var body_excerpt = page.body.substring(0,100);
+    return body_excerpt;
+  }
+  swig.setFilter('excerpt', excerpt);
 };

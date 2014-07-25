@@ -2,7 +2,7 @@
 
 {% block content %}
   <h1>Edit Page</h1>
-    <form action='/wiki/{{page.url_name}}/edit/submit' method='post'>
+    <form action='/wiki/{{page.url_name}}/{{page._id.toString()}}/edit/submit' method='post'>
       <h2>{{page.title}}</h2>
       <br>
     <div class="form-group">
