@@ -18,8 +18,7 @@ A very simple Wikipedia clone, where the user can add, edit, and delete pages.
 - Bootstrap
 
 
-<h2>Future Improvements<h2>
-
+<h3>Future Improvements</h3>
 - Adding a disambiguation page for wiki articles with same names
 - Authentication, using passport.js, for a user to customize their own wiki pages
 
